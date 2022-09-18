@@ -11,9 +11,13 @@
         <module name="order" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gateway" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gateway" options="-parameters" />
       <module name="order" options="-parameters" />
       <module name="service" options="-parameters" />
     </option>
