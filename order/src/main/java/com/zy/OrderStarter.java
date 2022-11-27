@@ -9,7 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @Slf4j
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients(basePackages = "com.zy")
+@EnableFeignClients
 public class OrderStarter {
     public static void main(String[] args) {
         log.info("启动类启动");

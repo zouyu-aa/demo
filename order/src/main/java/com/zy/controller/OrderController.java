@@ -5,7 +5,6 @@ import com.zy.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.stereotype.Controller;
 import org.springframework.util.CollectionUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
@@ -22,7 +21,7 @@ public class OrderController {
     @Value("${user.password}")
     private String password;
 
-    @RequestMapping(value = "/test", method = RequestMethod.POST)
+    @PostMapping(value = "/test")
     //@ResponseBody
     public String test(@RequestBody  @Valid User user, BindingResult bindingResult) {
         log.info("密码========={}",  password);
